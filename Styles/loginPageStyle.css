@@ -37,16 +37,6 @@ input {
 }
 
 button {
-    border: none;
-    background-color: var(--background-dark);
-    border-radius: 20px;
-    padding: 5px 10px;
-    color: var(--text-bright);
-    font-size: 18px;
-    width: 80%;
     margin-top: 20px;
-}
-
-button:hover {
-    cursor: pointer;
+    width: 80%;
 }
