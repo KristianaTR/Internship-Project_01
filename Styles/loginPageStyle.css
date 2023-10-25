@@ -1,0 +1,52 @@
+.page-content.LoginPage 
+.content-container {
+    display: flex;
+    flex-direction: column;
+    /* width: 30%; */
+    padding: 10px 20px;
+    align-items: center;
+}
+
+form {
+    background-color: var(--background-white);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: var(--text-grey);
+    width: 100%;
+}
+
+input {
+    padding: 5px 8px;
+    background-color: var(--background-grey);
+    outline: none;
+    border: none;
+    margin-top: 5px;
+}
+
+button {
+    border: none;
+    background-color: var(--background-dark);
+    border-radius: 20px;
+    padding: 5px 10px;
+    color: var(--text-bright);
+    font-size: 18px;
+    width: 80%;
+    margin-top: 20px;
+}
+
+button:hover {
+    cursor: pointer;
+}
