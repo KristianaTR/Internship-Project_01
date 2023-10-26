@@ -44,7 +44,21 @@ body {
     flex: 1;
     justify-content: center;
     padding: 20px 0;
-    width: 50%;
+    width: 60%;
+}
+
+.content-container.homePage,
+.content-container.profilePage,
+.content-container.yourMoviesPage {
+    background-color: var(--background-white);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    width: 100%;
+    height: fit-content;
 }
 
 /*header*/
@@ -55,7 +69,7 @@ nav.navbar {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     border-radius: 20px;
     padding: 20px;
-    width: 50%;
+    width: 60%;
     box-sizing: border-box;
 }
 
@@ -67,6 +81,46 @@ nav.navbar a {
     cursor: pointer;
 }
 
+/*table --> */
+table.content-table {
+    width: 100%;
+    padding-top: 20px;
+    border-collapse:  separate;
+    border-spacing: 0 10px;
+}
+
+.content-table tbody tr {
+    background-color: var(--background-grey);
+}
+
+.content-table tbody tr td:first-child {
+    border-top-left-radius: 20px; 
+    border-bottom-left-radius: 20px; 
+    padding-left: 20px;
+}
+
+thead th,
+tbody td {
+    text-align: left;
+    padding: 10px;
+}
+
+thead th:first-child {
+    padding-left: 20px;
+}
+
+tbody td:last-child {
+    background-color: var(--background-dark);
+    padding-right: 30px;
+    padding-left: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* <-- table */
+
+
+/*button-->*/
 button {
     border: none;
     background-color: var(--background-dark);
@@ -75,12 +129,12 @@ button {
     padding: 5px 20px;
     color: var(--text-bright);
     font-size: 18px;
-    margin-top: 20px;
 }
 
 button:hover {
     cursor: pointer;
 }
+/*<-- button*/
 
 /*footer*/
 .page-footer {

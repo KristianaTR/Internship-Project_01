@@ -1,54 +1,7 @@
 /*content*/
- 
-.content-container.homePage{
-    background-color: var(--background-white);
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-    width: 100%;
-    height: fit-content;
-}
 
 .content-container.homePage h2 {
     font-weight: 100;
-}
-
-table.content-table {
-    width: 100%;
-    padding-top: 20px;
-    border-collapse:  separate;
-    border-spacing: 0 10px;
-}
-
-.content-table tbody tr {
-    background-color: var(--background-grey);
-}
-
-.content-table tbody tr td:first-child {
-    border-top-left-radius: 20px; 
-    border-bottom-left-radius: 20px; 
-    padding-left: 20px;
-}
-
-thead th,
-tbody td {
-    text-align: left;
-    padding: 10px;
-}
-
-thead th:first-child {
-    padding-left: 20px;
-}
-
-tbody td:last-child {
-    background-color: var(--background-dark);
-    padding-right: 30px;
-    padding-left: 30px;
-    text-align: center;
-    cursor: pointer;
 }
 
 .table-stock-img {
