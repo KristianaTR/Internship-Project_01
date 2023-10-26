@@ -40,3 +40,12 @@ button {
     margin-top: 20px;
     width: 80%;
 }
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: var(--text-bright);
+}
