@@ -19,6 +19,10 @@ form {
     margin-bottom: 30px;
 }
 
+form.form-register {
+    display: none;
+}
+
 label {
     display: flex;
     flex-direction: column;
@@ -34,6 +38,16 @@ input {
     outline: none;
     border: none;
     margin-top: 5px;
+}
+
+.error-input {
+    border: 1px solid red;
+}
+
+p.validation-msg {
+    color: red;
+    margin: 0;
+    font-size: 12px;
 }
 
 button {
