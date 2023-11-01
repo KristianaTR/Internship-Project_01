@@ -17,51 +17,124 @@
         </header>
         <div class="page-content LoginPage">
             <div class="content-container">
-                <form action="" class="form-login">
+                <form id="form-signIn">
                     <label for="email-signIn">
                         Email
-                        <input type="email" id="email-signIn" placeholder="email">
+                        <input 
+                            type="email"
+                            id="email-signIn" 
+                            placeholder="email"
+                            autocomplete="on"
+                        >
+                        <p 
+                            class="validation-msg" 
+                            id="validation-msg-emailSignIn"
+                        ></p>
                     </label>
                     <label for="password-signIn">
                         Password
-                        <input type="password" id="password-signIn" placeholder="password">
+                        <input 
+                            type="password" 
+                            id="password-signIn" 
+                            placeholder="password"
+                            autocomplete="on"
+                        >
+                        <p 
+                            class="validation-msg" 
+                            id="validation-msg-passwordSignIn"
+                        ></p>
                     </label>
-                    <a href="./home.html">
-                        <button>
-                            Sign in 
-                        </button>
-                    </a>
+                    <button 
+                        type="button"
+                        onclick="validateFormSignInAndRedirect()">
+                        Sign in 
+                    </button>
                 </form>
-                <form action="" class="form-register">
+                <button
+                    type="button"
+                    id="btn-openFormRegister" 
+                    onclick="showFormRegister()"
+                >
+                    Register
+                </button>
+                <form class="form-register" id="form-register">
                     <label for="name">
                         Name
-                        <input type="text" id="name" placeholder="name">
+                        <input 
+                            type="text" 
+                            id="name" 
+                            placeholder="name"
+                            autocomplete="on"
+                        >
+                        <p 
+                            class="validation-msg" 
+                            id="validation-msg-name"
+                        ></p>
                     </label>
-                    <label for="Surname">
+                    <label for="surname">
                         Surname
-                        <input type="text" id="Surname" placeholder="Surname">
+                        <input 
+                            type="text" 
+                            id="surname" 
+                            placeholder="surname"
+                            autocomplete="on"
+                        >
+                        <p 
+                            class="validation-msg" 
+                            id="validation-msg-surname"
+                        ></p>
                     </label>
                     <label for="email-reg">
                         Email
-                        <input type="email" id="email-reg" placeholder="email">
+                        <input 
+                            type="email" 
+                            id="email-reg" 
+                            placeholder="email"
+                        >
+                        <p 
+                            class="validation-msg" 
+                            id="validation-msg-emailRegistration"
+                        ></p>
                     </label>
-                    <label for="email-again">
+                    <label for="email-reg-repeat">
                         Email again
-                        <input type="email" id="email-again" placeholder="email">
+                        <input 
+                            type="email" 
+                            id="email-reg-repeat" 
+                            placeholder="email"
+                        >
+                        <p 
+                            class="validation-msg" 
+                            id="validation-msg-emailRegRepeat"
+                        ></p>
                     </label>
                     <label for="password-reg">
                         Password
-                        <input type="password" id="password-reg" placeholder="password">
+                        <input 
+                            type="password" 
+                            id="password-reg" 
+                            placeholder="password"
+                        >
+                        <p 
+                            class="validation-msg" 
+                            id="validation-msg-passwordReg"
+                        ></p>
                     </label>
-                    <label for="password-again">
+                    <label for="password-reg-repeat">
                         Password again
-                        <input type="password" id="password-again" placeholder="password">
+                        <input 
+                            type="password" 
+                            id="password-reg-repeat" 
+                            placeholder="password"
+                        >
+                        <p 
+                            class="validation-msg" 
+                            id="validation-msg-passwordRepeat"
+                        ></p>
                     </label>
-                    <a href="./home.html">
-                        <button>
-                            Register
-                        </button>
-                    </a>
+                    <button type="button" onclick="validateFormRegAndRedirect()">
+                        Register
+                    </button>
                 </form>
 
             </div>
@@ -77,3 +150,5 @@
     </div>
 </body>
 </html>
+
+<script src="../Scripts/login.js"></script>
