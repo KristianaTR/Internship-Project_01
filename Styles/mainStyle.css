@@ -73,12 +73,18 @@ nav.navbar {
     box-sizing: border-box;
 }
 
-nav.navbar {
+nav.navbar a.nav-link {
+    display: inline-block;
     color: #ffff;
     font-size: 20px;
     margin: 0 10px;
     text-decoration: none;
     cursor: pointer;
+}
+
+nav.navbar a.nav-link.active {
+    font-weight: bold;
+    font-size: 22px;
 }
 
 /*table --> */
