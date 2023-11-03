@@ -73,7 +73,7 @@ nav.navbar {
     box-sizing: border-box;
 }
 
-nav.navbar a {
+nav.navbar {
     color: #ffff;
     font-size: 20px;
     margin: 0 10px;
@@ -111,10 +111,18 @@ thead th:first-child {
 
 tbody td:last-child {
     background-color: var(--background-dark);
-    padding-right: 30px;
-    padding-left: 30px;
+    padding: 0;
     text-align: center;
-    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+tbody td:last-child:hover {
+    border: solid 2px rgb(34, 143, 83);
+    transition: 0.2s all;
+}
+
+tbody td:last-child:hover .rent-btn {
+    color: rgb(34, 143, 83);
 }
 
 /* <-- table */

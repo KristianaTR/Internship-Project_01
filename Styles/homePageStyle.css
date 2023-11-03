@@ -4,6 +4,10 @@
     font-weight: 100;
 }
 
+tbody tr:hover {
+    background-color: #acabab;
+}
+
 .table-stock-img {
     text-align: center;
 }
@@ -14,6 +18,15 @@ tbody td img {
 
 .rent-btn {
     color: var(--text-bright);
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+    transition: 0.2s all;
+    border-radius: 0;
+}
+
+.rent-btn.out-of-stock {
+    cursor: not-allowed;
 }
 
 /*footer*/
