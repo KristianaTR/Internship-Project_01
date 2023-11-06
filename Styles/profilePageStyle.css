@@ -26,10 +26,24 @@
 
 .profile-data {
     flex: 2;
+    flex-direction: column;
 }
 
-.profile-data p{
+.profile-data div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     margin: 0 0 10px 0;
+}
+
+.profile-data div p {
+    margin: 0;
+    padding-left: 10px;
+}
+
+.profile-data div p.title {
+    font-weight: bold;
+    text-transform: capitalize;
 }
 
 .action-buttons-container {
