@@ -1,9 +1,3 @@
-.count-display {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
 .count-display button{
     border-radius: 0;
     font-size: 12px;
@@ -20,6 +14,21 @@
 .content-table tr td:last-child {
     background-color: var(--button-red);
     padding: 10px;
+}
+
+.yourMoviesPage tbody td:last-child:hover {
+    border: solid 2px transparent;
+    transition: 0.2s all;
+}
+
+.delete-btn {
+    color: var(--text-bright);
+    background-color: var(--button-red);
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+    transition: 0.2s all;
+    border-radius: 0;
 }
 
 .content-table tr td:last-child span {
