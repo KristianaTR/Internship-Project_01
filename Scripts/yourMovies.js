@@ -5,7 +5,7 @@ console.log(movieList);
 
 const table = document.querySelector(".content-table tbody");
 console.log(table);
-const rentTimeAmount = 12;
+let rentTime = JSON.parse(localStorage.getItem("rentTime")) || 12;
 
 function renderYourMoviesList (yourMovies) {
     yourMovies.forEach((movie) => {
@@ -24,16 +24,16 @@ function renderYourMoviesList (yourMovies) {
         countButtonDecrement.className = "decrement-btn";
         countButtonDecrement.innerHTML = "&lt;";
 
-        const rentTime = document.createElement("span");
-        rentTime.textContent = rentTimeAmount + "h";
+        const rentTimeElement = document.createElement("span");
+        rentTimeElement.textContent = rentTime + "h";
 
-        const countButtonInrement = document.createElement("button");
-        countButtonInrement.className = "increment-btn";
-        countButtonInrement.innerHTML = "&gt;";
+        const countButtonIncrement = document.createElement("button");
+        countButtonIncrement.className = "increment-btn";
+        countButtonIncrement.innerHTML = "&gt;";
 
         timeCell.appendChild(countButtonDecrement);
-        timeCell.appendChild(rentTime);
-        timeCell.appendChild(countButtonInrement);
+        timeCell.appendChild(rentTimeElement);
+        timeCell.appendChild(countButtonIncrement);
         
         const priceCell = document.createElement("td");
         priceCell.textContent = movie.rentalPrice.toFixed(2) + "€";
@@ -89,8 +89,8 @@ function handleRentTimeChanges () {
             const rentTimeText = countDisplay.querySelector("span");
             let currentRentTime = parseInt(rentTimeText.textContent);
             if (currentRentTime > 12) {
-                currentRentTime -= 12;
-                rentTimeText.textContent = currentRentTime + "h";
+                rentTime -= 12;
+                rentTimeText.textContent = rentTime + "h";
             } else if (currentRentTime === 12) {
                 alert("This is the minimum of the rent time!")
             };
@@ -103,11 +103,13 @@ function handleRentTimeChanges () {
             const rentTimeText = countDisplay.querySelector("span");
             let currentRentTime = parseInt(rentTimeText.textContent);
             if (currentRentTime < 168) {
-                currentRentTime += 12;
-                rentTimeText.textContent = currentRentTime + "h";
+                rentTime += 12;
+                rentTimeText.textContent = rentTime + "h";
             } else if (currentRentTime === 168) {
                 alert("You reached the maximum of the rent time!")
             };
+
+            localStorage.setItem("rentTime", JSON.stringify(rentTime));
         });
     });
 
