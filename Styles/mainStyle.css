@@ -64,6 +64,7 @@ body {
 /*header*/
 nav.navbar {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     background-color: #363636;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -143,11 +144,22 @@ button {
     padding: 5px 20px;
     color: var(--text-bright);
     font-size: 18px;
+    transition: 0.2s all;
 }
 
 button:hover {
     cursor: pointer;
 }
+
+button.btn-signOut:hover {
+    background-color: var(--background-grey);
+    color: var(--text-dark);
+}
+
+button.btn-signOut:active {
+    transform: scale(0.96);
+}
+
 /*<-- button*/
 
 /*footer*/

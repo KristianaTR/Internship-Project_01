@@ -52,6 +52,7 @@ const movieList = [
 let yourMovies = [];
 
 const table = document.querySelector(".content-table tbody");
+const signOutBtn = document.querySelector(".btn-signOut");
 
 function renderMovieList (movieList) {
     movieList.forEach((movie) => {
@@ -129,4 +130,12 @@ function handleRentClick (movie, rentButton, stockImage) {
     }
 }
 
+function handleSignOut () {
+    signOutBtn.addEventListener("click", () => {
+        localStorage.removeItem("currentUser");
+        window.location.href = "login.html";
+    })
+}
+
 renderMovieList(movieList);
+handleSignOut();

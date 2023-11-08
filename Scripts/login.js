@@ -8,6 +8,7 @@ const emailRegisterErrorElement = document.getElementById("validation-msg-emailR
 const emailRegisterRepeat = document.getElementById("email-reg-repeat");
 const passwordRegister = document.getElementById("password-reg");
 const passwordRegisterRepeat = document.getElementById("password-reg-repeat");
+const userList = JSON.parse(localStorage.getItem("userList")) || [];
 
 let text;
 
@@ -30,7 +31,7 @@ function validateEmail (email, errorMessageElement) {
     }
 }
 
-function validatePasswordSignIn (password) {
+function validatePasswordSignIn () {
     if (passwordSignIn.value === "") {
         text = "Please enter password";
         document.getElementById("validation-msg-passwordSignIn").innerHTML = text;
@@ -47,10 +48,22 @@ function validateFormSignInAndRedirect() {
     validateEmail (emailSignIn, emailSignInErrorElement);
     validatePasswordSignIn(passwordSignIn);
     
-    if (validateEmail (emailSignIn, emailSignInErrorElement) &&
-        validatePasswordSignIn(passwordSignIn)
+    const foundUser = userList.find(
+        user => 
+        user.email === emailSignIn.value && 
+        user.password === passwordSignIn.value
+    );
+
+    if (
+        validateEmail (emailSignIn, emailSignInErrorElement) &&
+        validatePasswordSignIn(passwordSignIn) &&
+        foundUser
     ) {
+        localStorage.setItem("currentUser", JSON.stringify(foundUser));
         window.location.href = "home.html";
+    } else {
+        const errorElement = document.getElementById("validation-msg");
+        errorElement.textContent = "Invalid email or password";
     }
 }
 
@@ -138,6 +151,14 @@ function validateFormRegAndRedirect () {
         validatePassword(passwordRegister) &&
         validatePasswordRepeat(passwordRegister, passwordRegisterRepeat)
     ) {
+        const newUser = {
+            name: nameRegister.value,
+            surname: surnameRegister.value,
+            email: emailRegister.value,
+            password: passwordRegister.value,
+        }
+        userList.push(newUser);
+        localStorage.setItem("userList", JSON.stringify(userList));
         window.location.href = "home.html";
     }
 }
